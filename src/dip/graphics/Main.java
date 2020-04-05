@@ -1,13 +1,17 @@
 package dip.graphics;
 
+import dipfx.common.LogUtil;
 import dipfx.graphics.AppLoader;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.logging.Level;
+
 public class Main extends Application {
     public static void main(String[] args) {
+        LogUtil.defaultLevel = Level.INFO;
         launch(args);
     }
 
