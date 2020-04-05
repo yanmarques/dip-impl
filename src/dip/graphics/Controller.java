@@ -1,12 +1,14 @@
 package dip.graphics;
 
 import dip.filters.NegativeScaleFilter;
+import dip.filters.PixelMarker;
 import dip.filters.ThresholdFilter;
 import dip.filters.grayScale.ArithmeticFilter;
 import dip.filters.grayScale.WeightedFilter;
 import dip.filters.noise.CrossFilter;
 import dip.filters.noise.InXFilter;
 import dip.filters.noise.SquareNoise;
+import dipfx.common.MouseInput;
 import dipfx.graphics.MainController;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
@@ -40,5 +42,10 @@ public class Controller extends MainController {
     @Override
     public int colorToDecimal(double color) {
         return (int) (color * 255);
+    }
+
+    @Override
+    public Image onImageMark(MouseInput srcInput, MouseInput dstInput, Image image) {
+        return new PixelMarker(srcInput, dstInput).run(image);
     }
 }
