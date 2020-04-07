@@ -15,10 +15,16 @@ public class ThresholdFilter extends PixelContextFilter {
     }
 
     @Override
+    public Image run(Image source) {
+        this.currentValue = (double) this.thresholdUnit.getValue() / 255;
+        return super.run(source);
+    }
+
+    @Override
     public Color filter(PixelContext pixelContext) {
         Color oldColor = pixelContext.getCurrentColor();
 
-        if ((oldColor.getRed() * 255) >= this.thresholdUnit.getValue()) {
+        if (oldColor.getRed() >= this.currentValue) {
             return new Color(1, 1, 1, oldColor.getOpacity());
         }
 
