@@ -1,10 +1,10 @@
 package dip.filters;
 
-import dipfx.common.BaseFilter;
 import dipfx.common.PixelContext;
+import dipfx.common.PixelContextFilter;
 import javafx.scene.paint.Color;
 
-public class NegativeScaleFilter extends BaseFilter {
+public class NegativeScaleFilter extends PixelContextFilter {
     @Override
     public Color filter(PixelContext pixelContext) {
         Color oldColor = pixelContext.getCurrentColor();

@@ -1,11 +1,11 @@
 package dip.filters;
 
-import dipfx.common.BaseFilter;
 import dipfx.common.MouseInput;
 import dipfx.common.PixelContext;
+import dipfx.common.PixelContextFilter;
 import javafx.scene.paint.Color;
 
-public class PixelMarker extends BaseFilter {
+public class PixelMarker extends PixelContextFilter {
     private MouseInput source;
     private MouseInput destination;
     private int[] axisXRange = new int[2];

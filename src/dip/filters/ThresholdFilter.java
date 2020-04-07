@@ -1,12 +1,14 @@
 package dip.filters;
 
-import dipfx.common.BaseFilter;
 import dipfx.common.PixelContext;
+import dipfx.common.PixelContextFilter;
 import dipfx.common.Unit;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
-public class ThresholdFilter extends BaseFilter {
+public class ThresholdFilter extends PixelContextFilter {
     private Unit thresholdUnit;
+    private double currentValue;
 
     public ThresholdFilter(Unit thresholdUnit) {
         this.thresholdUnit = thresholdUnit;

@@ -1,15 +1,15 @@
 package dip.filters.noise;
 
-import dipfx.common.BaseFilter;
 import dipfx.common.PixelContext;
-import dipfx.common.PixelToolkit;
+import dipfx.common.PixelContextFilter;
+import dipfx.common.SimplePixelToolkit;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
 
-abstract public class BaseNoiseFilter extends BaseFilter {
+abstract public class BaseNoiseFilter extends PixelContextFilter {
     public BaseNoiseFilter() {
-        this.setPixelToolkit(new PixelToolkit(this::filter, 1, -1, -1));
+        this.setPixelToolkit(new SimplePixelToolkit<>(this::filter, 1, -1, -1));
     }
 
     abstract public ArrayList<Color> getNeighbours(PixelContext pixelContext);

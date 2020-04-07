@@ -1,10 +1,10 @@
 package dip.filters.grayScale;
 
-import dipfx.common.BaseFilter;
 import dipfx.common.PixelContext;
+import dipfx.common.PixelContextFilter;
 import javafx.scene.paint.Color;
 
-public class ArithmeticFilter extends BaseFilter {
+public class ArithmeticFilter extends PixelContextFilter {
     public Color filter(PixelContext context) {
         Color oldColor = context.getCurrentColor();
         double average = this.calcScale(oldColor);
