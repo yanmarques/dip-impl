@@ -5,6 +5,8 @@ import dip.filters.PixelMarker;
 import dip.filters.ThresholdFilter;
 import dip.filters.grayScale.ArithmeticFilter;
 import dip.filters.grayScale.WeightedFilter;
+import dip.filters.multiImg.AddFilter;
+import dip.filters.multiImg.SubFilter;
 import dip.filters.noise.CrossFilter;
 import dip.filters.noise.InXFilter;
 import dip.filters.noise.SquareNoise;
@@ -25,6 +27,9 @@ public class Controller extends MainController {
         this.filters.put("weighted-gray-scale", new WeightedFilter(this.redSliderUnit,
                         this.greenSliderUnit, this.blueSliderUnit));
         this.filters.put("threshold", new ThresholdFilter(this.thresholdUnit));
+
+        this.multiImgFilters.put("add-multi-image", new AddFilter(this.srcMultiImgUnit, this.dstMultiImgUnit));
+        this.multiImgFilters.put("sub-multi-image", new SubFilter());
     }
 
     @Override
