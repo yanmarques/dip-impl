@@ -11,6 +11,7 @@ import dip.filters.noise.CrossFilter;
 import dip.filters.noise.InXFilter;
 import dip.filters.noise.SquareNoise;
 import dipfx.common.MouseInput;
+import dipfx.graphics.BaseHistogramController;
 import dipfx.graphics.MainController;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
@@ -52,5 +53,10 @@ public class Controller extends MainController {
     @Override
     public Image onImageMark(MouseInput srcInput, MouseInput dstInput, Image image) {
         return new PixelMarker(srcInput, dstInput).run(image);
+    }
+
+    @Override
+    public BaseHistogramController getHistogramController() {
+        return new HistogramController();
     }
 }

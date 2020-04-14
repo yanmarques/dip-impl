@@ -17,7 +17,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = AppLoader.load(new Controller());
+        Parent root = AppLoader.loadBase(new Controller());
         primaryStage.setTitle("Processamento Digital de Imagens");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
