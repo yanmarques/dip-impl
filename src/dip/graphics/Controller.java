@@ -1,5 +1,6 @@
 package dip.graphics;
 
+import dip.filters.EqualizerFilter;
 import dip.filters.NegativeScaleFilter;
 import dip.filters.PixelMarker;
 import dip.filters.ThresholdFilter;
@@ -31,6 +32,8 @@ public class Controller extends MainController {
 
         this.multiImgFilters.put("add-multi-image", new AddFilter(this.srcMultiImgUnit, this.dstMultiImgUnit));
         this.multiImgFilters.put("sub-multi-image", new SubFilter());
+
+        this.filters.put("equalizer", new EqualizerFilter(this.ckOnlyValidPixelsUnit));
     }
 
     @Override
