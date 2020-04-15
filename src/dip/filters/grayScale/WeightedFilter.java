@@ -4,11 +4,11 @@ import dipfx.common.Unit;
 import javafx.scene.paint.Color;
 
 public class WeightedFilter extends ArithmeticFilter {
-    private Unit redUnit;
-    private Unit greenUnit;
-    private Unit blueUnit;
+    private Unit<Integer> redUnit;
+    private Unit<Integer> greenUnit;
+    private Unit<Integer> blueUnit;
 
-    public WeightedFilter(Unit redUnit, Unit greenUnit, Unit blueUnit) {
+    public WeightedFilter(Unit<Integer> redUnit, Unit<Integer> greenUnit, Unit<Integer> blueUnit) {
         this.redUnit = redUnit;
         this.greenUnit = greenUnit;
         this.blueUnit = blueUnit;

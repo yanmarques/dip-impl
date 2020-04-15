@@ -7,12 +7,12 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class AddFilter extends MixedContextFilter {
-    private Unit srcUnit;
-    private Unit dstUnit;
+    private Unit<Integer> srcUnit;
+    private Unit<Integer> dstUnit;
     private double currentSrcValue;
     private double currentDstValue;
 
-    public AddFilter(Unit srcUnit, Unit dstUnit) {
+    public AddFilter(Unit<Integer> srcUnit, Unit<Integer> dstUnit) {
         this.srcUnit = srcUnit;
         this.dstUnit = dstUnit;
     }

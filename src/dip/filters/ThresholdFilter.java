@@ -7,10 +7,10 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class ThresholdFilter extends PixelContextFilter {
-    private Unit thresholdUnit;
+    private Unit<Integer> thresholdUnit;
     private double currentValue;
 
-    public ThresholdFilter(Unit thresholdUnit) {
+    public ThresholdFilter(Unit<Integer> thresholdUnit) {
         this.thresholdUnit = thresholdUnit;
     }
 
