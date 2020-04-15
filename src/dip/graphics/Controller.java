@@ -1,5 +1,6 @@
 package dip.graphics;
 
+import dip.common.histogram.Data;
 import dip.filters.EqualizerFilter;
 import dip.filters.NegativeScaleFilter;
 import dip.filters.PixelMarker;
@@ -50,7 +51,7 @@ public class Controller extends MainController {
 
     @Override
     public int colorToDecimal(double color) {
-        return (int) (color * 255);
+        return Data.toTone(color);
     }
 
     @Override
